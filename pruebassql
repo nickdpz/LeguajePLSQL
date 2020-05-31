@@ -1,0 +1,8 @@
+execute actualiza_fecha_empleados();
+select * from empleados;
+select * from notas;
+notaN1 number := 0;
+select NOTA1 from NOTAS;
+select NOTA1 AS MATE, NOTA2 AS CIENCIA, NOTA3 AS PROGRAMACION, NOTA4 AS HISTORIA, promedio_notas(NOTA1,NOTA2,NOTA3) AS PROMEDIO FROM NOTAS;
+select a.*,promedio_notas(nota1,nota2,nota3,nota4) as promedio from notas a;
+Select * from empleados where nombre like '%T%';

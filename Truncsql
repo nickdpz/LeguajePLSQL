@@ -1,0 +1,15 @@
+set serveroutput on;
+
+DECLARE
+fechaNumber number;
+fechaChar nvarchar2(100);
+fechaTrunc number;
+
+BEGIN
+  fechaChar:=to_char(sysdate,'yyyymmdd');    
+  fechaNumber:=to_number(fechaChar);
+  fechaTrunc:=trunc(fechaNumber/1000);
+  dbms_output.put_line('Usuario: '|| fechaChar );
+  dbms_output.put_line('Cantidad: '|| fechaNumber ); 
+  dbms_output.put_line('Trunc: '|| fechaTrunc);  
+END;

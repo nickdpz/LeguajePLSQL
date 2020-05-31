@@ -1,0 +1,8 @@
+create or replace function promedio_notas( nota1  in number, nota2 in number, nota3 in number, nota4  in number)
+return number
+IS
+    promedio number(5):=0;
+BEGIN
+    promedio :=(nota1+nota2+nota3+nota4)/4;
+    return promedio;
+END;
