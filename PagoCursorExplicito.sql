@@ -13,7 +13,7 @@ DECLARE
 BEGIN
     OPEN c_empleado;
     LOOP
-        FETCH c_empleado into nombre, salario,dias_trabajados;
+        FETCH c_empleado into nombre, salario, dias_trabajados;
         total_a_pagar:=trunc(dias_trabajados*(salario/30));
         EXIT WHEN c_empleado%notfound;
         dbms_output.put_line( nombre || ' Total a pagar ' || total_a_pagar );        
